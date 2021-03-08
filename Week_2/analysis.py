@@ -9,8 +9,8 @@ from operator import eq
 from matplotlib.lines import Line2D
 
 #Load Data Sets
-cabData = pd.read_csv("D:/Internship/Data Glacier/Week 2/DataSets/Cab_Data.csv")
-transactions = pd.read_csv('D:/Internship/Data Glacier/Week 2/DataSets/Transaction_ID.csv')
+cabData = pd.read_csv("DataSets/Cab_Data.csv")
+transactions = pd.read_csv('DataSets/Transaction_ID.csv')
 tripsData = pd.merge(left = cabData, right = transactions, how = 'left').sort_values(by=['Company', 'Date of Travel'])
 #Data sets for each city and customer
 city = pd.read_csv('D:/Internship/Data Glacier/Week 2/DataSets/City.csv')
